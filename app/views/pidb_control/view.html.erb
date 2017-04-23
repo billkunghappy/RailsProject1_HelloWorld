@@ -1,0 +1,25 @@
+<h1>View Page</h1>
+<% @allpi.each do |info|%>
+<ul>
+	<li>
+	Name:
+	<%=info.name%>	
+	<!-- <% %>只執行內部的script，而<%= %>才能輸出給html，因此若用<%info.name%>是無法顯示東西的 -->
+	</li>
+	<li>
+	Age:
+	<%=info.age%>	
+	</li>
+	<li>
+	Description:
+	<%=info.description%>	
+	</li>
+	<li>
+		<%= link_to "Show" ,:controller=>"pidb_control",:action=>"show",:id=>info.id %>
+	</li>
+	<!-- link to show page, set :id==info的id ，會放在params中傳回 -->
+	
+</ul>
+<%end%>
+<%= link_to "Back to PIDB", :controller=>"pidb_control",:action=>"index"%>
+<%= link_to "make_new", :controller=>"pidb_control",:action=>"new"%>

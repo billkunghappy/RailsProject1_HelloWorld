@@ -1,0 +1,13 @@
+<h1>Name</h1>
+<%= @piid.name %>
+<h1>Age</h1>
+<%= @piid.age %>
+<h1>Description</h1>
+<%= @piid.description %>
+</br>
+<%= link_to "Edit" ,:action=>"edit" %>
+</br>
+<%= button_to "Delete" ,:controller=>"pidb_control",:action=>"destroy"%>
+<!-- 不知為啥link_to不work -->
+</br>
+<%= link_to "Pidb Homepage" ,:action=>"index"%>

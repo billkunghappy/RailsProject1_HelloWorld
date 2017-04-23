@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @custom_title || "HelloApp"%></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+
+
+  </head>
+
+  <body>
+  <p style="color:green"><%= flash[:notice]%></p>
+  <p style="color:red"><%= flash[:alert]%></p>
+  <!-- 這是從controller傳進來的特殊變數flash，是一個hash，可以被從一個action帶到另一個action(用redirect_to) -->
+  <!-- 是一個暫存資料 -->
+    <%= yield %>
+  </body>
+</html>

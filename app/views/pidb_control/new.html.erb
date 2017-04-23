@@ -1,0 +1,10 @@
+<%= form_for @newpi, :url => { :controller => 'pidb_control', :action => 'create' } ,html: {class: "whatever"} do|f|%>
+<!-- form_for @newpi 會將表單綁定到@newpi 這個物件上，回傳時會回傳:newpi
+	url:{}則是指定這個form submit 的目地的
+	html:{}可以在{}中加入對此form html的敘述
+ -->
+ <%= render :partial =>'form' ,:locals => {:f => f}%>
+
+<%= f.submit "Create"%>
+<!-- submit buttom 顯示"Create" -->
+<%end%>

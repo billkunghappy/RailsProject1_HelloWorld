@@ -1,0 +1,7 @@
+<%= form_for @piid ,url:{:controller => "pidb_control",:action => "update", :id=>@piid.id} do |f|%>
+	<%= render :partial => 'form', :locals =>{:f=>f}%>
+	<!-- 引用局部樣板 '_form.html.erb' -->
+	<!-- render :partial宣告引用局部樣板 'partial_template_name'這裡不用加底線 -->
+	<!-- :locals=>{:f=>f} 傳遞區域變數f(因為這裡是關連用法要用symbol :f)到partial_templates的f變數中 -->
+	<%= f.submit "Update Data"%>
+<%end%>
