@@ -7,7 +7,7 @@
 </br>
 <%= link_to "Edit" ,:action=>"edit" %>
 </br>
-<%= button_to "Delete" ,:controller=>"pidb_control",:action=>"destroy"%>
+<%= button_to "Delete" ,data:{confirm:"Are you sure?"},:controller=>"pidb_control",:action=>"destroy"%>
 <!-- 不知為啥link_to不work -->
 </br>
 <%= link_to "Pidb Homepage" ,:action=>"index"%>
